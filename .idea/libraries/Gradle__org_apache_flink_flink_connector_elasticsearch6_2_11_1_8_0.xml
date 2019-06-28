@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.apache.flink:flink-connector-elasticsearch6_2.11:1.8.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.flink/flink-connector-elasticsearch6_2.11/1.8.0/c0eddc6a3e273fdb45be1268e7638688e95664b3/flink-connector-elasticsearch6_2.11-1.8.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.flink/flink-connector-elasticsearch6_2.11/1.8.0/c2e1ef9faa87106441fd4388b6b4ad64a4a6b1c9/flink-connector-elasticsearch6_2.11-1.8.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

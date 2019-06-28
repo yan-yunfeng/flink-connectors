@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.apache.kerby:kerb-core:1.0.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.kerby/kerb-core/1.0.1/82357e97a5c1b505beb0f6c227d9f39b2d7fdde0/kerb-core-1.0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.kerby/kerb-core/1.0.1/bdb610cf26e95c6b072a26be697311db445e1711/kerb-core-1.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

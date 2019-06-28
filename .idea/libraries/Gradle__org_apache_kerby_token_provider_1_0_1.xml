@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.apache.kerby:token-provider:1.0.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.kerby/token-provider/1.0.1/e6feb6b7c06600924e8b6bda3263c870cfb0a447/token-provider-1.0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.kerby/token-provider/1.0.1/72f692e96fa8f680837fef97531969de5e44368c/token-provider-1.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

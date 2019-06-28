@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.apache.flink:flink-connector-filesystem_2.11:1.8.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.flink/flink-connector-filesystem_2.11/1.8.0/898da398c0312726df64159904f0702aa8148a14/flink-connector-filesystem_2.11-1.8.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.flink/flink-connector-filesystem_2.11/1.8.0/204be289c8fd646fe59f9f90009942cd7035f4f7/flink-connector-filesystem_2.11-1.8.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

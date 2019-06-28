@@ -1,0 +1,90 @@
+plugins {
+    id "com.moowork.node" version "1.2.0"
+    id "com.github.johnrengelman.shadow" version "4.0.2"
+}
+
+group 'com.flink'
+version '1.0-SNAPSHOT'
+
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    maven { url = 'https://nexus.fybdp.com/repository/maven-public/' }
+    maven { url = 'http://maven.aliyun.com/nexus/content/groups/public/' }
+    mavenCentral()
+}
+def mainClass = System.getProperty("mainClass") ?: "com.qydata.flink.SeerEsMongo"
+def baseNameString = System.getProperty("baseName")
+def versionString = System.getProperty("versionString")?:""
+println "hello, $mainClass"
+
+jar {
+    zip64 true
+    manifest {
+        attributes(
+                'Main-Class': "$mainClass"
+        )
+    }
+}
+shadowJar {
+    baseName = "$baseNameString"
+    version = "$versionString"
+    classifier = null
+    zip64 true
+
+    transform(com.github.jengelman.gradle.plugins.shadow.transformers.AppendingTransformer) {
+        resource = 'reference.conf'
+    }
+
+    manifest {
+        attributes(
+                'Main-Class': "$mainClass"
+        )
+    }
+
+    dependencies {
+//        include(dependency(':batch-core'))
+    }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    compile group: 'com.qydata.json', name: 'json', version: '1.0.0'
+
+//    compile group: 'com.alibaba', name: 'fastjson', version: '1.2.58'
+    
+    compile group: 'org.apache.hadoop', name: 'hadoop-client', version: '3.1.1'
+
+    compile group: 'org.apache.flink', name: 'flink-java', version: '1.8.0'
+    compile group: 'org.apache.flink', name: 'flink-connectors', version: '1.8.0'
+    compile group: 'org.apache.flink', name: 'flink-streaming-java_2.11', version: '1.8.0'
+    compile group: 'org.apache.flink', name: 'flink-connector-filesystem_2.11', version: '1.8.0'
+//    compile group: 'org.apache.flink', name: 'flink-hadoop-compatibility_2.11', version: '1.8.0'
+
+
+//    compile group: 'org.apache.flink', name: 'flink-connector-kafka_2.11', version: '1.8.0'
+    compile group: 'org.apache.flink', name: 'flink-connector-elasticsearch6_2.11', version: '1.8.0'
+    compile group: 'org.mongodb', name: 'mongodb-driver', version: '3.6.3'
+//    compile group: 'org.apache.flink', name: 'flink-table', version: '1.8.0', ext: 'pom'
+//    compile group: 'org.apache.flink', name: 'flink-table-planner_2.11', version: '1.8.0'
+//    compile group: 'org.apache.flink', name: 'flink-streaming-scala_2.11', version: '1.8.0'
+
+
+//    compile group: 'org.apache.bahir', name: 'flink-connector-redis_2.11', version: '1.0'
+
+//    compile group: 'org.elasticsearch', name: 'elasticsearch', version: '6.3.1'
+//    compile group: 'org.elasticsearch.client', name: 'elasticsearch-rest-high-level-client', version: '6.3.1'
+//    compile group: 'redis.clients', name: 'jedis', version: '2.9.0'
+//    compile group: 'org.mongodb', name: 'mongodb-driver', version: '3.6.3'
+
+//    compile group: 'org.apache.pdfbox', name: 'pdfbox', version: '2.0.8'
+//    compile group: 'org.apache.poi', name: 'poi-ooxml', version: '3.8'
+//    compile group: 'org.apache.poi', name: 'poi-scratchpad', version: '3.8'
+
+
+
+}
