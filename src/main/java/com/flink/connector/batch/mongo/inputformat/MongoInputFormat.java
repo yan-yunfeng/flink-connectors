@@ -1,6 +1,6 @@
-package com.flink.mongo;
+package com.flink.connector.batch.mongo.inputformat;
 
-import com.qydata.json.JsonObject;
+import com.flink.connector.core.MongoConfigKey;
 
 import org.apache.flink.configuration.Configuration;
 import org.bson.Document;
@@ -28,22 +28,22 @@ public class MongoInputFormat extends MongoInputFormatBase<String> {
         }
 
         public Builder setUri(String uri){
-            this.parameters.setString(MongoConfigKey.URI,uri);
+            this.parameters.setString(MongoConfigKey.URI, uri);
             return this;
         }
 
         public Builder setDatabase(String database){
-            this.parameters.setString(MongoConfigKey.DATABASE,database);
+            this.parameters.setString(MongoConfigKey.DATABASE, database);
             return this;
         }
 
         public Builder setCollection(String collection){
-            this.parameters.setString(MongoConfigKey.COLLECTION,collection);
+            this.parameters.setString(MongoConfigKey.COLLECTION, collection);
             return this;
         }
 
         public Builder setBatchSize(int batchSize){
-            this.parameters.setInteger(MongoConfigKey.BATCH_SIZE,batchSize);
+            this.parameters.setInteger(MongoConfigKey.BATCH_SIZE, batchSize);
             return this;
         }
 

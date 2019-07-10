@@ -1,4 +1,4 @@
-package com.flink.es;
+package com.flink.connector.core;
 
 /**
  * es的配置的key

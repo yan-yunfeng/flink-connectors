@@ -1,5 +1,6 @@
-package com.flink.mongo;
+package com.flink.connector.batch.mongo.inputformat;
 
+import com.flink.connector.core.MongoConfigKey;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
 import com.mongodb.client.MongoCursor;
@@ -21,8 +22,6 @@ public abstract class MongoInputFormatBase<IN> extends GenericInputFormat<IN> im
 
     private Configuration parameters;
 
-    private transient MongoClient mongoClient;
-
     private transient MongoCursor<Document> mongoCursor;
 
     MongoInputFormatBase(Configuration parameters) {
@@ -33,17 +32,16 @@ public abstract class MongoInputFormatBase<IN> extends GenericInputFormat<IN> im
     public void open(GenericInputSplit split) throws IOException {
         super.open(split);
 
-        String uri = Objects.requireNonNull(this.parameters.getString(MongoConfigKey.URI, null),"uri can not be null");
-        String database = Objects.requireNonNull(this.parameters.getString(MongoConfigKey.DATABASE,null),"database can not be null");
-        String collection = Objects.requireNonNull(this.parameters.getString(MongoConfigKey.COLLECTION,null),"collection can not be null");
-        int batchSize = this.parameters.getInteger(MongoConfigKey.BATCH_SIZE,1000);
+        String uri = Objects.requireNonNull(this.parameters.getString(MongoConfigKey.URI, null), "uri can not be null");
+        String database = Objects.requireNonNull(this.parameters.getString(MongoConfigKey.DATABASE, null), "database can not be null");
+        String collection = Objects.requireNonNull(this.parameters.getString(MongoConfigKey.COLLECTION, null), "collection can not be null");
+        int batchSize = this.parameters.getInteger(MongoConfigKey.BATCH_SIZE, 1000);
 
         this.mongoCursor = new MongoClient(new MongoClientURI(uri)).getDatabase(database)
                                                                    .getCollection(collection)
                                                                    .find()
                                                                    .batchSize(batchSize)
                                                                    .iterator();
-
     }
 
     @Override

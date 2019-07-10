@@ -1,4 +1,4 @@
-package com.flink;
+package com.flink.connector;
 
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
@@ -37,6 +37,5 @@ public class MongoChangeStreamDemo {
 //            System.out.println(changeStreamDocument.getOperationType().getValue());
 //            System.out.println(new JsonObject(document).encodePrettily());
         }
-
     }
 }

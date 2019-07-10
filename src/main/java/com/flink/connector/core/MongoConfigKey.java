@@ -1,4 +1,4 @@
-package com.flink.mongo;
+package com.flink.connector.core;
 
 /**
  * author Yan YunFeng  Email:twd.wuyun@163.com
