@@ -4,6 +4,8 @@
     <bytecodeTargetLevel>
       <module name="batch_main" target="1.8" />
       <module name="batch_test" target="1.8" />
+      <module name="flink-connectors_main" target="1.8" />
+      <module name="flink-connectors_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

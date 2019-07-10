@@ -46,7 +46,6 @@ shadowJar {
     }
 
     dependencies {
-//        include(dependency(':batch-core'))
     }
 }
 

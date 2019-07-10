@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/batch.iml" filepath="$PROJECT_DIR$/.idea/modules/batch.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/batch_main.iml" filepath="$PROJECT_DIR$/.idea/modules/batch_main.iml" group="batch" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/batch_test.iml" filepath="$PROJECT_DIR$/.idea/modules/batch_test.iml" group="batch" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/flink-connectors.iml" filepath="$PROJECT_DIR$/.idea/modules/flink-connectors.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/flink-connectors_main.iml" filepath="$PROJECT_DIR$/.idea/modules/flink-connectors_main.iml" group="flink-connectors" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/flink-connectors_test.iml" filepath="$PROJECT_DIR$/.idea/modules/flink-connectors_test.iml" group="flink-connectors" />
     </modules>
   </component>
 </project>
