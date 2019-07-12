@@ -1,6 +1,6 @@
 package com.flink.connector.batch.mongo.inputformat;
 
-import com.flink.connector.core.MongoConfigKey;
+import com.flink.connector.common.MongoConfigKey;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
 import com.mongodb.client.MongoCursor;

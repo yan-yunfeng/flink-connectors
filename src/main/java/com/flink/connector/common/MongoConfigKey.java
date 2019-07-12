@@ -1,4 +1,4 @@
-package com.flink.connector.core;
+package com.flink.connector.common;
 
 /**
  * author Yan YunFeng  Email:twd.wuyun@163.com

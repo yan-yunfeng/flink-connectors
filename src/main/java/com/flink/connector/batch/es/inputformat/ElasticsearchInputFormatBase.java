@@ -1,6 +1,6 @@
 package com.flink.connector.batch.es.inputformat;
 
-import com.flink.connector.core.EsConfigKey;
+import com.flink.connector.common.EsConfigKey;
 
 import org.apache.flink.api.common.io.GenericInputFormat;
 import org.apache.flink.configuration.Configuration;

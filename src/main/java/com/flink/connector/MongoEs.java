@@ -2,9 +2,9 @@ package com.flink.connector;
 
 import com.flink.connector.batch.es.inputformat.ElasticsearchInputFormat;
 import com.flink.connector.batch.mongo.inputformat.MongoInputFormat;
-import com.flink.connector.core.ConfigReader;
-import com.flink.connector.core.EsConfigKey;
-import com.flink.connector.core.MongoConfigKey;
+import com.flink.connector.common.ConfigReader;
+import com.flink.connector.common.EsConfigKey;
+import com.flink.connector.common.MongoConfigKey;
 import com.qydata.json.JsonObject;
 
 import org.apache.flink.api.common.functions.FlatJoinFunction;
@@ -18,7 +18,7 @@ import org.apache.flink.util.Collector;
  * author Yan YunFeng  Email:twd.wuyun@163.com
  * create 19-6-23 下午5:04
  */
-public class SeerMongoEs {
+public class MongoEs {
 
     public static void main(String[] args) throws Exception {
         final ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();

@@ -1,4 +1,4 @@
-package com.flink.connector.core;
+package com.flink.connector.common;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
