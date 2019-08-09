@@ -5,7 +5,6 @@ import com.flink.connector.batch.mongo.inputformat.MongoInputFormat;
 import com.flink.connector.common.ConfigReader;
 import com.flink.connector.common.EsConfigKey;
 import com.flink.connector.common.MongoConfigKey;
-import com.qydata.json.JsonObject;
 
 import org.apache.flink.api.common.functions.FlatJoinFunction;
 import org.apache.flink.api.java.DataSet;
@@ -44,19 +43,9 @@ public class MongoEs {
                                           .setBatchSize(1000)
                                           .build();
 
-        DataSet<String> mongoSet =
-            env.createInput(mongoInputFormat)
-               .map(json -> {
-                   JsonObject jsonObject = new JsonObject(json);
-                   return jsonObject.getString("_id");
-               });
+        DataSet<String> mongoSet = env.createInput(mongoInputFormat);
 
-        DataSet<String> esSet =
-            env.createInput(inputFormat)
-               .map(json -> {
-                   JsonObject jsonObject = new JsonObject(json);
-                   return jsonObject.getString("rid");
-               });
+        DataSet<String> esSet = env.createInput(inputFormat);
 
         mongoSet.fullOuterJoin(esSet)
                 .where(key -> key)
@@ -82,7 +71,7 @@ public class MongoEs {
 //                )
 //                .filter(value -> !value.f1.contains("="))
 //                .map(value -> value.f0 + "," + value.f1)
-////                .writeAsText("hdfs://172.16.20.2:8020/EsCompareWhithMongo");
+////                .writeAsText("hdfs://localhost:8020/EsCompareWhithMongo");
 //                .writeAsText("/home/yyf/Desktop/asd");
 
         env.execute();

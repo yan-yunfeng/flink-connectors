@@ -12,7 +12,6 @@ apply plugin: 'java'
 sourceCompatibility = 1.8
 
 repositories {
-    maven { url = 'https://nexus.fybdp.com/repository/maven-public/' }
     maven { url = 'http://maven.aliyun.com/nexus/content/groups/public/' }
     mavenCentral()
 }
@@ -51,8 +50,6 @@ shadowJar {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
-
-    compile group: 'com.qydata.json', name: 'json', version: '1.0.0'
 
 //    compile group: 'com.alibaba', name: 'fastjson', version: '1.2.58'
     
